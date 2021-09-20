@@ -1,7 +1,9 @@
 /*
 Primeiros passos em Kotlin
 1 / 3 — Sequência Lógica
+
 Detalhe
+
 Desenvolva um programa capaz de ler um valor inteiro N.
 N * 2 linhas de saída vão ser apresentadas na execução do programa,
 seguindo a lógica do exemplo mais abaixo.
@@ -14,18 +16,18 @@ Saída
 Imprima a saída conforme o exemplo fornecido.
 */
 
-
-
-
 import kotlin.math.pow
 
 fun main() {
+    //println("Entre com um número: ")
     val n = 1..(readLine() ?: return).toInt()
+    n.forEach {
+        println(it.toString() + " "
+                + it.toDouble().pow(2).toInt().toString() + " "
+                + it.toDouble().pow(3).toInt().toString())
 
-    n.forEach {n1->
-        val n2 = (n1.toDouble().pow(2)).toInt()
-        val n3 = (n1.toDouble().pow(3)).toInt()
-        println("$n1 $n2 $n3")
-        println("$n1 ${n2+1} ${n3+1}")
+        println(it.toString() + " "
+                + (it.toDouble().pow(2).toInt() + 1).toString() + " "
+                + (it.toDouble().pow(3).toInt() + 1).toString())
     }
 }
